@@ -27,11 +27,15 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         rbemainwindow.cpp \
-    viewsensors.cpp
+    viewsensors.cpp \
+    controller.cpp \
+    sensors.cpp
 
 HEADERS += \
         rbemainwindow.h \
-    viewsensors.h
+    viewsensors.h \
+    controller.h \
+    sensors.h
 
 FORMS += \
         rbemainwindow.ui \
