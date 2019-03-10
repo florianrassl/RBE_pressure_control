@@ -2,6 +2,7 @@
 #define RBEMAINWINDOW_H
 
 #include <QMainWindow>
+#include "viewsensors.h"
 
 namespace Ui {
 class rbeMainWindow;
@@ -21,6 +22,7 @@ private slots:
 
 private:
     Ui::rbeMainWindow *ui;
+    ViewSensors*viewSensors;
 };
 
 #endif // RBEMAINWINDOW_H

@@ -10,46 +10,45 @@
     <height>343</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>506</width>
+    <height>16777215</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>RBE</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="3" column="1">
+   <item row="1" column="1">
     <widget class="QLabel" name="sensor1">
      <property name="text">
-      <string>98,0  Bar</string>
+      <string>0,0  Bar</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="0">
+   <item row="2" column="0">
     <widget class="QLabel" name="labelS2">
      <property name="text">
       <string>Sensor 2</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="labelS1">
+   <item row="2" column="1">
+    <widget class="QLabel" name="sensor2">
      <property name="text">
-      <string>Sensor 1</string>
+      <string>0,0 Bar</string>
      </property>
     </widget>
    </item>
-   <item row="6" column="0">
-    <widget class="QLabel" name="labelS5">
+   <item row="3" column="1">
+    <widget class="QLabel" name="sensor3">
      <property name="text">
-      <string>Sensor 4</string>
+      <string>0,0 Bar</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="2">
-    <widget class="QProgressBar" name="progressBarSystem">
-     <property name="value">
-      <number>0</number>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="2">
+   <item row="3" column="2">
     <widget class="QProgressBar" name="progressBarS3">
      <property name="value">
       <number>0</number>
@@ -57,27 +56,48 @@
     </widget>
    </item>
    <item row="5" column="0">
-    <widget class="QLabel" name="labelS4">
+    <widget class="QPushButton" name="buttonStart">
+     <property name="styleSheet">
+      <string notr="true">background: green;
+color: black;
+
+</string>
+     </property>
      <property name="text">
-      <string>Sensor 3</string>
+      <string>Start</string>
      </property>
     </widget>
    </item>
-   <item row="6" column="2">
+   <item row="5" column="1">
+    <widget class="QPushButton" name="buttonStop">
+     <property name="styleSheet">
+      <string notr="true">background: red;
+color: black;</string>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QPushButton" name="buttonInc">
+     <property name="styleSheet">
+      <string notr="true">background: yellow;
+color: black;</string>
+     </property>
+     <property name="text">
+      <string>Inc</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
     <widget class="QProgressBar" name="progressBarS4">
      <property name="value">
       <number>0</number>
      </property>
     </widget>
    </item>
-   <item row="5" column="1">
-    <widget class="QLabel" name="sensor3">
-     <property name="text">
-      <string>101,4 Bar</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="2">
+   <item row="2" column="2">
     <widget class="QProgressBar" name="progressBarS2">
      <property name="value">
       <number>0</number>
@@ -93,31 +113,52 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="2">
+   <item row="3" column="0">
+    <widget class="QLabel" name="labelS4">
+     <property name="text">
+      <string>Sensor 3</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QProgressBar" name="progressBarSystem">
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
     <widget class="QProgressBar" name="progressBarS1">
      <property name="value">
       <number>0</number>
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
-    <widget class="QLabel" name="sensor2">
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelS1">
      <property name="text">
-      <string>100,3 Bar</string>
+      <string>Sensor 1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="labelS5">
+     <property name="text">
+      <string>Sensor 4</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLabel" name="sensor4">
+     <property name="text">
+      <string>0,0 Bar</string>
      </property>
     </widget>
    </item>
    <item row="0" column="1">
     <widget class="QLabel" name="systemPressure">
      <property name="text">
-      <string>100,0 Bar</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1">
-    <widget class="QLabel" name="sensor4">
-     <property name="text">
-      <string>100,0 Bar</string>
+      <string>0,0 Bar</string>
      </property>
     </widget>
    </item>
@@ -127,6 +168,26 @@
       <string>SystemDruck</string>
      </property>
     </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QPushButton" name="buttonExit">
+     <property name="text">
+      <string>Exit</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>30</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
    </item>
   </layout>
  </widget>

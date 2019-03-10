@@ -15,6 +15,11 @@ public:
     explicit ViewSensors(QWidget *parent = nullptr);
     ~ViewSensors();
 
+    void updateView();
+
+private slots:
+    void on_buttonExit_pressed();
+
 private:
     Ui::ViewSensors *ui;
 };

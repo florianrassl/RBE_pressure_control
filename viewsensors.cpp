@@ -12,3 +12,12 @@ ViewSensors::~ViewSensors()
 {
     delete ui;
 }
+
+void ViewSensors::updateView(){
+
+}
+
+void ViewSensors::on_buttonExit_pressed()
+{
+   this->close();
+}

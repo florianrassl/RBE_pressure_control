@@ -1,12 +1,12 @@
 #include "rbemainwindow.h"
 #include "ui_rbemainwindow.h"
-#include "viewsensors.h"
 
 rbeMainWindow::rbeMainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::rbeMainWindow)
 {
     ui->setupUi(this);
+    viewSensors = new ViewSensors();
 }
 
 rbeMainWindow::~rbeMainWindow()
@@ -16,7 +16,6 @@ rbeMainWindow::~rbeMainWindow()
 
 void rbeMainWindow::on_buttonViewSensor_clicked()
 {
-    ViewSensors*viewSensors = new ViewSensors();
     viewSensors->show();
 }
 

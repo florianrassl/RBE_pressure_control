@@ -1,10 +1,9 @@
-
 QWidget {
-  color: wight;
+  color: white;
   background: black;
 }
 
 QLabel {
-  color: wight;
+  color: white;
   background: black;
 }
