@@ -23,14 +23,14 @@
    <item row="1" column="1">
     <widget class="QLabel" name="sensor1">
      <property name="text">
-      <string>0,0  Bar</string>
+      <string>0,0 Bar</string>
      </property>
     </widget>
    </item>
    <item row="2" column="0">
     <widget class="QLabel" name="labelS2">
      <property name="text">
-      <string>Sensor 2</string>
+      <string>Sensor 2:</string>
      </property>
     </widget>
    </item>
@@ -116,7 +116,7 @@ color: black;</string>
    <item row="3" column="0">
     <widget class="QLabel" name="labelS4">
      <property name="text">
-      <string>Sensor 3</string>
+      <string>Sensor 3:</string>
      </property>
     </widget>
    </item>
@@ -137,14 +137,14 @@ color: black;</string>
    <item row="1" column="0">
     <widget class="QLabel" name="labelS1">
      <property name="text">
-      <string>Sensor 1</string>
+      <string>Sensor 1:            </string>
      </property>
     </widget>
    </item>
    <item row="4" column="0">
     <widget class="QLabel" name="labelS5">
      <property name="text">
-      <string>Sensor 4</string>
+      <string>Sensor 4:</string>
      </property>
     </widget>
    </item>
@@ -165,7 +165,7 @@ color: black;</string>
    <item row="0" column="0">
     <widget class="QLabel" name="labelP">
      <property name="text">
-      <string>SystemDruck</string>
+      <string>SystemDruck:</string>
      </property>
     </widget>
    </item>

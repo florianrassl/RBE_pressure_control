@@ -7,3 +7,13 @@ QLabel {
   color: white;
   background: black;
 }
+
+QPushButton {
+  color: black;
+  background: grey;
+}
+
+QProgressBar {
+  color: black;
+  background: grey;
+}

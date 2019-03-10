@@ -1,3 +1,6 @@
+#include <vector>
+
+#include "sensor.h"
 #include "rbemainwindow.h"
 #include "ui_rbemainwindow.h"
 
@@ -7,6 +10,11 @@ rbeMainWindow::rbeMainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     viewSensors = new ViewSensors();
+    c = new Controller();
+
+    qRegisterMetaType<std::vector<Sensor>>("std::vector<Sensor>");
+    QObject::connect(c, &Controller::newDataAvailable,
+                     viewSensors, &ViewSensors::updateUI, Qt::QueuedConnection);
 }
 
 rbeMainWindow::~rbeMainWindow()

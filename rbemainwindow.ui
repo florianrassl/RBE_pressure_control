@@ -14,79 +14,64 @@
    <string>rbeMainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-
-</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>13</x>
-      <y>13</y>
-      <width>611</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Rbe  werbung</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonViewSensor">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>131</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>view sensors</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonExit">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>120</y>
-      <width>131</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>exit</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonEdit">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>131</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>edit</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>643</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuRBE">
-    <property name="title">
-     <string>RBE</string>
-    </property>
-   </widget>
-   <addaction name="menuRBE"/>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>RBE Pressure controll</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <widget class="QPushButton" name="buttonViewSensor">
+      <property name="text">
+       <string>view sensors</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QPushButton" name="buttonEdit">
+      <property name="text">
+       <string>edit pressure provile </string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="2">
+     <widget class="QPushButton" name="buttonExit">
+      <property name="text">
+       <string>exit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>RBE </string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

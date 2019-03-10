@@ -2,6 +2,8 @@
 #define VIEWSENSORS_H
 
 #include <QWidget>
+#include <vector>
+#include "sensor.h"
 
 namespace Ui {
 class ViewSensors;
@@ -15,7 +17,8 @@ public:
     explicit ViewSensors(QWidget *parent = nullptr);
     ~ViewSensors();
 
-    void updateView();
+public slots:
+    void updateUI(std::vector<Sensor>);
 
 private slots:
     void on_buttonExit_pressed();
