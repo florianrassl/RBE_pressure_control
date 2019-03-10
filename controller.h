@@ -23,7 +23,6 @@ private:
     void parsData();
     void sendData();
     void saveData();
-    void updateUI();
     std::string serialPort;
     std::vector<Sensor> sVector;
     std::thread *tCon;

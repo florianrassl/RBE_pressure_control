@@ -21,6 +21,8 @@ private slots:
     void on_buttonViewSensor_clicked();
     void on_buttonExit_clicked();
 
+    void on_buttonEdit_clicked();
+
 private:
     Ui::rbeMainWindow *ui;
     ViewSensors*viewSensors;

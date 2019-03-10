@@ -29,19 +29,19 @@ SOURCES += \
         rbemainwindow.cpp \
     viewsensors.cpp \
     controller.cpp \
-    editpressureprofile.cpp
+    editprofile.cpp
 
 HEADERS += \
         rbemainwindow.h \
     viewsensors.h \
     controller.h \
     sensor.h \
-    editpressureprofile.h
+    editprofile.h
 
 FORMS += \
         rbemainwindow.ui \
     viewsensors.ui \
-    editpressureprofile.ui
+    editprofile.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

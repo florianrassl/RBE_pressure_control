@@ -31,3 +31,8 @@ void rbeMainWindow::on_buttonExit_clicked()
 {
     QApplication::quit();
 }
+
+void rbeMainWindow::on_buttonEdit_clicked()
+{
+
+}

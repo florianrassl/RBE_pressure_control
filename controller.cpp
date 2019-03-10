@@ -30,19 +30,16 @@ void Controller::saveData(){
     //TODO save
 }
 
-void Controller::updateUI(){
-
-}
-
 int Controller::controllerLoop(){
     while(true){
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
         for(Sensor &s : sVector){
+            //sim code
             s.sValue +=1;
             if(s.sValue > 110)
                 s.sValue = 0;
         }
-        //viewSensors->updateView(sVector);
+
         newDataAvailable(sVector);
     }
    // return 0;
