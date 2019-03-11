@@ -8,7 +8,7 @@ struct Sensor{
     Sensor(int sMax) : sMax(sMax){
     }
     const float sMax;
-    float sValue;
+    float sValue = 0;
     int getSPercent(){
         return static_cast<int>(sValue / sMax * 100.f);
     }

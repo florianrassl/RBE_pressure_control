@@ -63,6 +63,26 @@ void ViewSensors::updateUI(std::vector<Sensor> sVector){
     else{
          ui->sensor4->setStyleSheet("color: white;");
     }
+
+    //s5
+    ui->progressBarS5->setValue(sVector[5].getSPercent());
+    ui->sensor5->setText(sVector[5].getSText());
+    if(sVector[5].getSPercent() >= 100){
+        ui->sensor5->setStyleSheet("color: red;");
+    }
+    else{
+         ui->sensor5->setStyleSheet("color: white;");
+    }
+
+    //s6
+    ui->progressBarS6->setValue(sVector[6].getSPercent());
+    ui->sensor6->setText(sVector[6].getSText());
+    if(sVector[6].getSPercent() >= 100){
+        ui->sensor6->setStyleSheet("color: red;");
+    }
+    else{
+         ui->sensor6->setStyleSheet("color: white;");
+    }
 }
 
 void ViewSensors::on_buttonExit_pressed()

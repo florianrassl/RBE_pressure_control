@@ -20,12 +20,18 @@ public:
 private slots:
     void on_buttonExit_clicked();
     void on_buttonAdd_clicked();
+    void on_buttonDelete_clicked();
+    void on_buttonClear_clicked();
+    void on_buttonLoad_clicked();
+    void on_buttonSave_clicked();
+    void on_tableEdit_cellChanged(int row, int column);
 
 private:
     Ui::EditProfile *ui;
     std::list<ProfileEntry> pList;
     void fillTable();
     void addTableRow(ProfileEntry);
+    void loadProfile(std::string);
 };
 
 #endif // EDITPROFILE_H

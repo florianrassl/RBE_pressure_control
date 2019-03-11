@@ -14,9 +14,8 @@ Controller::Controller()
 }
 
 Controller::~Controller(){
-
+    //TODO exit  thread properly
 }
-//TODO exut threat properly
 
 void Controller::parsData(){
     //TODO TEST CODE
