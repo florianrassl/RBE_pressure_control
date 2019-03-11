@@ -12,3 +12,8 @@ EditProfile::~EditProfile()
 {
     delete ui;
 }
+
+void EditProfile::on_buttonExit_clicked()
+{
+    this->hide();
+}

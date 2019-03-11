@@ -9,6 +9,8 @@ rbeMainWindow::rbeMainWindow(QWidget *parent) :
     ui(new Ui::rbeMainWindow)
 {
     ui->setupUi(this);
+
+    editProfile = new EditProfile();
     viewSensors = new ViewSensors();
     c = new Controller();
 
@@ -27,12 +29,12 @@ void rbeMainWindow::on_buttonViewSensor_clicked()
     viewSensors->show();
 }
 
+void rbeMainWindow::on_buttonEdit_clicked()
+{
+    editProfile->show();
+}
+
 void rbeMainWindow::on_buttonExit_clicked()
 {
     QApplication::quit();
-}
-
-void rbeMainWindow::on_buttonEdit_clicked()
-{
-
 }

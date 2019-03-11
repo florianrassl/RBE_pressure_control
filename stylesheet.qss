@@ -17,3 +17,8 @@ QProgressBar {
   color: black;
   background: grey;
 }
+
+QTableWidget {
+  color: black;
+  background: grey;
+}

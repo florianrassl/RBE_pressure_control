@@ -1,10 +1,7 @@
-<?xml version='1.0'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>EditProfile</class>
- <widget name="EditProfile" class="QWidget">
+ <widget class="QWidget" name="EditProfile">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,9 +11,53 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>RBE Edit</string>
   </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTableWidget" name="tableEdit">
+     <property name="maximumSize">
+      <size>
+       <width>614</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <column>
+      <property name="text">
+       <string>Nr.</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>time / s</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>pressure / bar</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignJustify|AlignVCenter</set>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="buttonAdd">
+     <property name="text">
+      <string>add line</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="buttonExit">
+     <property name="text">
+      <string>exit</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <pixmapfunction/>
+ <resources/>
  <connections/>
 </ui>

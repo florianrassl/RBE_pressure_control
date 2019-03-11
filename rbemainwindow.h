@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "viewsensors.h"
 #include "controller.h"
+#include "editprofile.h"
 
 namespace Ui {
 class rbeMainWindow;
@@ -25,7 +26,8 @@ private slots:
 
 private:
     Ui::rbeMainWindow *ui;
-    ViewSensors*viewSensors;
+    EditProfile *editProfile;
+    ViewSensors *viewSensors;
     Controller *c;
 };
 
