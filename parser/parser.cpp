@@ -51,10 +51,6 @@ pressure releasing vents).
 
 using namespace std;
 
-float p[PRESSURE_N];
-int time_row = 0;
-int pressure_row = 0;
-
 string delimiter = ",";
 
 regex sensordata("LABEL,Date,Time,-?[[:digit:]]+.[[:digit:]],-?[[:digit:]]+.[[:digit:]],-?[[:digit:]]+.[[:digit:]],-?[[:digit:]]+.[[:digit:]],-?[[:digit:]]+.[[:digit:]],-?[[:digit:]]+.[[:digit:]],-?[[:digit:]]+.[[:digit:]]");
@@ -63,9 +59,23 @@ regex cleardata("CLEARDATA");
 regex req_time("CELL,GET,FROMSHEET,Settings,A,[[:digit:]]+");
 regex req_pressure("CELL,GET,FROMSHEET,Settings,B,[[:digit:]]+");
 
-int parse_string(string input) 
+parser::parser()
 {
-	if(regex_match(input,sensordata)) {
+	for(int i=0; i<PRESSURE_N; i++) {
+ 		p[i] = 0.0;
+	}
+	time_row = 0.0;
+	pressure_row = 0.0;
+}
+
+parser::~parser()
+{
+  
+}
+
+int parser::parse_string(string input)
+{
+  if(regex_match(input,sensordata)) {
 		string token;
 		size_t pos = 0;
 		int i=0;
@@ -93,16 +103,15 @@ int parse_string(string input)
 			return 0;
 		}
                 if(i==PRESSURE_N-1) {
-			// TODO: Store Data to File or Database;
-			return SENSOR_DATA_SAVED;
+			return SENSOR_DATA_RECEIVED;
 		}
 	}
 	else if(regex_match(input,cleardata)) {
 		// clear data
+		return CLEARDATA;
 #ifdef DEBUG
 		cout << "Clear Data!" << endl;
 #endif
-		// TODO: Clear Data
 	}
 	else if(regex_match(input,req_time)) {
 		string token;
@@ -116,8 +125,7 @@ int parse_string(string input)
 			cout << "Send time row ";
 			cout << time_row << endl;
 #endif
-			// TODO: Send time in time_row
-			return TIME_SEND;
+			return SEND_TIME;
 		}
 		catch (...) {
 			return 0;
@@ -135,8 +143,7 @@ int parse_string(string input)
 			cout << "Send pressure row ";
 			cout << pressure_row << endl;
 #endif
-			// TODO: Send pressure in pressure_row
-			return PRESSURE_SEND;
+			return SEND_PRESSURE;
 		}
 		catch (...) {
 			return 0;
@@ -151,3 +158,20 @@ int parse_string(string input)
 	}
 	return 0;
 }
+
+int parser::get_time_row()
+{
+	return time_row;
+}
+
+int parser::get_pressure_row()
+{
+	return pressure_row;
+}
+
+float parser::get_pressure(int i)
+{
+	if(i<PRESSURE_N) return p[i];
+	else return 0;
+}
+
