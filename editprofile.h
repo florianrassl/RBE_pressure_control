@@ -2,6 +2,8 @@
 #define EDITPROFILE_H
 
 #include <QWidget>
+#include <list>
+#include "profileentry.h"
 
 namespace Ui {
 class EditProfile;
@@ -17,9 +19,13 @@ public:
 
 private slots:
     void on_buttonExit_clicked();
+    void on_buttonAdd_clicked();
 
 private:
     Ui::EditProfile *ui;
+    std::list<ProfileEntry> pList;
+    void fillTable();
+    void addTableRow(ProfileEntry);
 };
 
 #endif // EDITPROFILE_H

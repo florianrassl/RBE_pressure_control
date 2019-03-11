@@ -2,13 +2,13 @@
 
 Controller::Controller()
 {
-    sVector.push_back(Sensor(100.f));
-    sVector.push_back(Sensor(100.f));
-    sVector.push_back(Sensor(100.f));
-    sVector.push_back(Sensor(100.f));
-    sVector.push_back(Sensor(100.f));
-    sVector.push_back(Sensor(100.f));
-    sVector.push_back(Sensor(100.f));
+    sVector.push_back(Sensor(250.f));
+    sVector.push_back(Sensor(250.f));
+    sVector.push_back(Sensor(250.f));
+    sVector.push_back(Sensor(250.f));
+    sVector.push_back(Sensor(250.f));
+    sVector.push_back(Sensor(250.f));
+    sVector.push_back(Sensor(250.f));
 
     tCon = new std::thread(&Controller::controllerLoop, this);
 }
@@ -22,7 +22,7 @@ void Controller::parsData(){
     //TODO TEST CODE
     for(Sensor &s : sVector){
         s.sValue +=1;
-            if(s.sValue > 110)
+            if(s.sValue > 270)
                 s.sValue = 0;
         }
 }
@@ -38,7 +38,7 @@ void Controller::saveData(){
 int Controller::controllerLoop(){
     while(true){
         //TODO SET INTERVALL AND FUCK
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
         sendData();
         parsData();

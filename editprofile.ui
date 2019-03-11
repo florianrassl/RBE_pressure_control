@@ -13,7 +13,73 @@
   <property name="windowTitle">
    <string>RBE Edit</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Profile Edit</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonAdd">
+       <property name="text">
+        <string>new line</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonDelete">
+       <property name="text">
+        <string>delete line</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonClear">
+       <property name="text">
+        <string>clear</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonLoad">
+       <property name="text">
+        <string>load file</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonSave">
+       <property name="text">
+        <string>save file</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonExit">
+       <property name="text">
+        <string>exit</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
    <item>
     <widget class="QTableWidget" name="tableEdit">
      <property name="maximumSize">
@@ -22,11 +88,6 @@
        <height>16777215</height>
       </size>
      </property>
-     <column>
-      <property name="text">
-       <string>Nr.</string>
-      </property>
-     </column>
      <column>
       <property name="text">
        <string>time / s</string>
@@ -40,20 +101,6 @@
        <set>AlignJustify|AlignVCenter</set>
       </property>
      </column>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="buttonAdd">
-     <property name="text">
-      <string>add line</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="buttonExit">
-     <property name="text">
-      <string>exit</string>
-     </property>
     </widget>
    </item>
   </layout>

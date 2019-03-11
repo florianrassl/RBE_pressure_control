@@ -36,7 +36,8 @@ HEADERS += \
     viewsensors.h \
     controller.h \
     sensor.h \
-    editprofile.h
+    editprofile.h \
+    profileentry.h
 
 FORMS += \
         rbemainwindow.ui \

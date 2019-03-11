@@ -22,3 +22,8 @@ QTableWidget {
   color: black;
   background: grey;
 }
+
+QLineEdit {
+  color: black;
+  background: grey;
+}
