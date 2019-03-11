@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 #include <thread>
+#include <QObject>
 #include "sensor.h"
-#include "viewsensors.h"
 
 class Controller : public QObject
 {
@@ -26,7 +26,6 @@ private:
     std::string serialPort;
     std::vector<Sensor> sVector;
     std::thread *tCon;
-    ViewSensors *viewSensors;
 };
 
 #endif // CONTROLLER_H

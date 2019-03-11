@@ -31,6 +31,7 @@ void EditProfile::on_buttonExit_clicked()
 
 void EditProfile::on_buttonAdd_clicked()
 {
+    //TODO Add at selected row not at end
     pList.push_back(ProfileEntry(0, 0));
     addTableRow(pList.back());
 }
@@ -63,7 +64,6 @@ void EditProfile::on_buttonClear_clicked()
     pList.clear();
 }
 
-#include <iostream>
 void EditProfile::on_buttonLoad_clicked()
 {
     QString fileName = QFileDialog::
