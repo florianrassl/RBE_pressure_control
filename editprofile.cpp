@@ -32,8 +32,22 @@ void EditProfile::on_buttonExit_clicked()
 void EditProfile::on_buttonAdd_clicked()
 {
     //TODO Add at selected row not at end
-    pList.push_back(ProfileEntry(0, 0));
-    addTableRow(pList.back());
+    ProfileEntry p(0,0);
+    int index;
+    auto selected = ui->tableEdit->selectedItems();
+    if(selected.size() == 0){
+        pList.push_back(p);
+        addTableRow(p);
+        return;
+    }
+    index = selected.last()->row();
+   // addTableRow(p, index);
+    auto iter =  pList.begin();
+    for(;index; index--)
+        iter++;
+    pList.insert(++iter, p);
+
+    fillTable();
 }
 
 void EditProfile::on_buttonDelete_clicked()
@@ -138,9 +152,19 @@ void EditProfile::fillTable(){
 }
 
 void EditProfile::addTableRow(ProfileEntry p){
-    ui->tableEdit->insertRow(ui->tableEdit->rowCount());
-    ui->tableEdit->setItem(ui->tableEdit->rowCount()-1, 0,
+    addTableRow(p, -1);
+}
+
+void EditProfile::addTableRow(ProfileEntry p, int index){
+    if(index < 0 || index > ui->tableEdit->rowCount()){
+        index = ui->tableEdit->rowCount();
+    }
+    else {
+        index++;
+    }
+    ui->tableEdit->insertRow(index);
+    ui->tableEdit->setItem(index, 0,
                            new QTableWidgetItem(QString::number(p.time)));
-    ui->tableEdit->setItem(ui->tableEdit->rowCount()-1, 1,
+    ui->tableEdit->setItem(index, 1,
                            new QTableWidgetItem(QString::number(p.pressure)));
 }

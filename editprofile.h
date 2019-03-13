@@ -31,6 +31,7 @@ private:
     std::list<ProfileEntry> pList;
     void fillTable();
     void addTableRow(ProfileEntry);
+    void addTableRow(ProfileEntry, int);
     void loadProfile(std::string);
 };
 
