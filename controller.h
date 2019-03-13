@@ -21,8 +21,8 @@ public: signals:
 private:
     int controllerLoop();
     void parsData();
-    void sendData();
-    void saveData();
+    void sendData() const;
+    void saveData() const;
     std::string serialPort;
     std::vector<Sensor> sVector;
     std::thread *tCon;
