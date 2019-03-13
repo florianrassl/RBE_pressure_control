@@ -29,7 +29,8 @@ SOURCES += \
         rbemainwindow.cpp \
     viewsensors.cpp \
     controller.cpp \
-    editprofile.cpp
+    editprofile.cpp \
+    sensor.cpp
 
 HEADERS += \
         rbemainwindow.h \

@@ -6,7 +6,8 @@
 
 struct Sensor{
     Sensor(int sMax) : sMax(sMax){
-        sName = "Sensor" + QString::number(sCount++);
+        sName = "Sensor" + QString::number(Sensor::sCount++);
+        sName = "fuck";
     }
     Sensor(int sMax, QString sName) : sMax(sMax), sName(sName){
 
@@ -22,11 +23,7 @@ struct Sensor{
         buff << sValue << " Bar";
         return QString::fromStdString(buff.str());
     }
-
-private:
     static int sCount;
 };
-
-int Sensor::sCount = 0;
 
 #endif // SENSOR_H
