@@ -23,6 +23,8 @@ struct Sensor{
         buff << sValue << " Bar";
         return QString::fromStdString(buff.str());
     }
+
+private:
     static int sCount;
 };
 
