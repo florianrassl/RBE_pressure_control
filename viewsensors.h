@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include <vector>
+#include <QLabel>
+#include <QProgressBar>
 #include "sensor.h"
 
 namespace Ui {
@@ -18,6 +20,7 @@ public:
     ~ViewSensors();
 
 public slots:
+    void initUI(std::vector<Sensor>);//TODO
     void updateUI(std::vector<Sensor>);
 
 private slots:
@@ -25,6 +28,22 @@ private slots:
 
 private:
     Ui::ViewSensors *ui;
+
+    //TODO
+    struct UISensor{
+        UISensor(QString name, ViewSensors *p){
+            //init ui elements
+            sName = new QLabel(name);
+            sBar = new QLabel("xxx");
+            sProgressBar = new QProgressBar();
+            //TODO set probs
+            //p->ui-> TODO
+        }
+        QLabel *sName;
+        QLabel *sBar;
+        QProgressBar *sProgressBar;
+    };
+    std::vector<UISensor*> uiVector;
 };
 
 #endif // VIEWSENSORS_H

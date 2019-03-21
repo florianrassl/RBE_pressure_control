@@ -13,7 +13,14 @@ ViewSensors::~ViewSensors()
     delete ui;
 }
 
+void ViewSensors::initUI(std::vector<Sensor> sVector){
+    for(const auto &i : sVector){
+        uiVector.push_back(new UISensor(i.sName, this));
+    }
+}
+
 void ViewSensors::updateUI(std::vector<Sensor> sVector){
+
     //s0
     ui->progressBarSystem->setValue(sVector[0].getSPercent());
     ui->systemPressure->setText(sVector[0].getSText());
@@ -33,6 +40,7 @@ void ViewSensors::updateUI(std::vector<Sensor> sVector){
     else{
          ui->sensor1->setStyleSheet("color: white;");
     }
+
 
     //s2
     ui->progressBarS2->setValue(sVector[2].getSPercent());
